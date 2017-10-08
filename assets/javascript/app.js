@@ -32,12 +32,13 @@ $(document).ready(function() {
     // Game ending sequence
     var gameComplete = function() {
     	clearTimeout(timerId);
-    	$("#pg1, #pg2").css("display", "none");
-    	$("#pg3").css("display", "block");
-
+    	
     	// Tally and display the results
     	countScore();
     	printResults();
+
+    	$("#pg1, #pg2").css("display", "none");
+    	$("#pg3").css("display", "block");
     };
 
     // Click button to go from page 2 to 3
