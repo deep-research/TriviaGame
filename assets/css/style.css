@@ -44,6 +44,10 @@ body {
 	height: 400px;
 }
 
+#pg2, #pg3 {
+	display: none;
+}
+
 form {
 	padding-top: 15px;
 	padding-bottom: 30px;

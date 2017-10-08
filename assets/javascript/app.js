@@ -20,9 +20,6 @@ $(document).ready(function() {
   		};
 	};
 
-    // Hide page 2 and 3 at start
-    $("#pg2, #pg3").css("display", "none");
-
     // Click button to go from page 1 to 2
     $("#btn1").on("click", function() {
     	$("#pg1, #pg3").css("display", "none");
@@ -62,10 +59,11 @@ $(document).ready(function() {
 	// Determine the score
 	var countScore = function() {
 		for (var i=0; i<answerList.length; i++) {
-			var val = $("input[name=question"+(i+1)+"]:checked").val();
-			if (val === answerList[i]) {
+			var questionName = "question" + (i+1);
+			var userVal = $("input[name="+questionName+"]:checked").val();
+			if (userVal === answerList[i]) {
 				correctCount++;
-			} else if (val === undefined) {
+			} else if (userVal === undefined) {
 				unansweredCount++;
 			} else {
 				incorrectCount++;
