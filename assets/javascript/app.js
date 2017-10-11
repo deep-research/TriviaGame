@@ -16,7 +16,6 @@ $(document).ready(function() {
   		} else {
 	  		timeLeft--;
 	  		$("#pg2 span").text(timeLeft);
-	  		console.log(timeLeft);
   		};
 	};
 
